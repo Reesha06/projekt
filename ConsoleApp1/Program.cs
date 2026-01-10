@@ -93,7 +93,7 @@ static void Ending()
             {
                Console.WriteLine("Du överlevde, men saknade modet.");
              }
-         Console.WriteLine("\nTryck Enter för att fortsätta...");
+         Console.WriteLine("\nTryck Enter för att fortsätta.");
         Console.ReadLine();
      
     }
