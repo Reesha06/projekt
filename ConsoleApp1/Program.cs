@@ -3,14 +3,16 @@ class Program
 {
       static List<string> Säck = new List<string>();
 
-      static bool gamecontinue= true;
+    static bool gamecontinue= true;
     static void Main()
     {
         Console.WriteLine("=== TEXTÄVENTYRET ===");
+       
 
-        while (gamecontinue)
+        while (gamecontinue)      //spelet körs tills spelaren väljer att sluta
         {
-            StartScene();
+            // Startar första scenen
+            StartScene();     
             Console.WriteLine("Vill du spela igen? (Ja/Nej). ");
             string answer = Console.ReadLine().ToLower();
 
@@ -22,7 +24,7 @@ class Program
 
     }
      
-     static void StartScene()
+     static void StartScene()       // Första scenen i spelet
     {
         Console.WriteLine("\nDu vaknar upp i en mörk skog.");
         Console.WriteLine("Vänster mot floden.");
@@ -38,7 +40,7 @@ class Program
         
     }
      
-    static void RiverScene()
+    static void RiverScene()     // Scen vid floden
     {
 
         Console.WriteLine("\nDu når floden och ser en gammal bro.");
@@ -47,7 +49,7 @@ class Program
 
         if (choice == "ja")
         {
-            Console.WriteLine("Du hittar en Silvernyckel!");
+            Console.WriteLine("Du hittar en Silvernyckel!");            // Spelaren får ett föremål
             Säck.Add("Silvernyckel");
             Ending();
         }
@@ -86,7 +88,7 @@ static void Ending()
         if(Säck.Contains("Silvernyckel"))
         {
             Console.WriteLine("Du fann friheten.");
-            Console.WriteLine("Gratis");
+            Console.WriteLine("Grattis");
         }
 
          else
